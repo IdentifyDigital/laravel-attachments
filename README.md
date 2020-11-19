@@ -1,6 +1,6 @@
 # identifydigital\laravel-attachments
 
-A laravel plugin that allows you to quickly add and work with addresses throughout your laravel application.
+A laravel plugin that allows you to quickly add and work with attachments throughout your laravel application.
 
 ## Installation
 
