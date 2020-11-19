@@ -47,7 +47,7 @@ trait HasAttachments
      * @param string|null $driver
      * @return mixed
      */
-    public function createAttachment(UploadedFile $file, string $driver = null){
+    public function uploadAttachment(UploadedFile $file, string $driver = null){
         $uuid = Str::uuid();
         $driver = ($driver === null ? config('filesystems.default') : $driver);
 

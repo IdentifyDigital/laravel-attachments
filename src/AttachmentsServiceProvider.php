@@ -20,6 +20,9 @@ class AttachmentsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/Config/attachments.php' => config_path('attachments.php'),
+        ]);
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
     }
 
