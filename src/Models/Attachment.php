@@ -4,6 +4,11 @@ namespace IdentifyDigital\Attachments\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Storage;
+
+/**
+ * Class Attachment
+ * @package IdentifyDigital\Attachments\Models
+ */
 class Attachment extends Model
 {
     use SoftDeletes;
@@ -61,6 +66,9 @@ class Attachment extends Model
         return sprintf("%.2f ", $this->attributes['size'] / pow(1024, $factor)) . ['B', 'KB', 'MB', 'GB', 'TB', 'PB'][$factor];
     }
 
+    /**
+     * @return string
+     */
     public function getIconAttribute()
     {
         $parsed = pathinfo($this->attributes['path']);
@@ -77,6 +85,9 @@ class Attachment extends Model
         }
     }
 
+    /**
+     * @return bool
+     */
     public function isImage()
     {
         $parsed = pathinfo($this->attributes['path']);
@@ -84,6 +95,11 @@ class Attachment extends Model
         return in_array(strtolower($parsed['extension']), ['jpg', 'jpeg', 'png']);
     }
 
+    public function getExtension()
+    {
+        $parsed = pathinfo($this->attributes['path']);
 
+        return $parsed['extension'];
+    }
 
 }

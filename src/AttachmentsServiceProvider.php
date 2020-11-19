@@ -7,6 +7,10 @@ use Illuminate\Support\ServiceProvider;
 use IdentifyDigital\Contacts\Models\Address;
 use IdentifyDigital\Contacts\Observers\AddressObserver;
 
+/**
+ * Class AttachmentsServiceProvider
+ * @package IdentifyDigital\Attachments
+ */
 class AttachmentsServiceProvider extends ServiceProvider
 {
     /**
