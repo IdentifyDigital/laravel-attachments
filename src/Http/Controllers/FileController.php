@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use IdentifyDigital\LaravelAttachments\Facades\AttachmentManager;
-use MPL\Common\Models\Attachment;
+use IdentifyDigital\LaravelAttachments\Models\Attachment;
 
 class FileController extends Controller
 {
