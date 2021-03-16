@@ -1,5 +1,5 @@
 <?php
-namespace IdentifyDigital\LaravelAttachments\Controllers;
+namespace IdentifyDigital\LaravelAttachments\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
