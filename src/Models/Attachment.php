@@ -24,6 +24,8 @@ class Attachment extends Model
         'id',
         'relation_type',
         'relation_id',
+        'authenticatable_type',
+        'authenticatable_id',
         'path',
         'driver',
         'size',
@@ -117,7 +119,7 @@ class Attachment extends Model
 
     /**
      * Added auth
-     * 
+     *
      * @return MorphTo
      */
     public function authenticatable()
