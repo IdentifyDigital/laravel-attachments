@@ -23,7 +23,6 @@ class LaravelAttachmentsRouteServiceProvider extends ServiceProvider
         $this->routes(function () {
             Route::name('api.')
                 ->prefix('api')
-                ->middleware('auth:sanctum')
                 ->group(__DIR__ . '/../routes/api.php');
         });
     }

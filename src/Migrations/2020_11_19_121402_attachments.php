@@ -15,13 +15,14 @@ class Attachments extends Migration
     {
         Schema::create('attachments', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name', 255);
-            $table->text('path');
-            $table->string('driver', 10);
-            $table->decimal('size',10,2,true);
-            $table->morphs('relation');
+            $table->timestamps();
             $table->softDeletes();
-            $table->timestamps(0);
+            $table->nullableMorphs('relation');
+            $table->morphs('authenticatable');
+            $table->string('path');
+            $table->string('name')->nullable();
+            $table->double('size', 10, 2)->default(0);
+            $table->string('driver')->default('local');
         });
     }
 

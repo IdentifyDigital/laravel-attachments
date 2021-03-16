@@ -3,6 +3,7 @@
 namespace IdentifyDigital\LaravelAttachments\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Storage;
 
@@ -102,6 +103,26 @@ class Attachment extends Model
         $parsed = pathinfo($this->attributes['path']);
 
         return $parsed['extension'];
+    }
+
+    /**
+     * Returns the model that this Attachment belongs to.
+     *
+     * @return MorphTo
+     */
+    public function relation()
+    {
+        return $this->morphTo('relation');
+    }
+
+    /**
+     * Added auth
+     * 
+     * @return MorphTo
+     */
+    public function authenticatable()
+    {
+        return $this->morphTo('authenticatable');
     }
 
 }
