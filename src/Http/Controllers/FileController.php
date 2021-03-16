@@ -43,8 +43,9 @@ class FileController extends Controller
      * @param Request $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
-    public function download(Request $request, Attachment $attachment)
+    public function download(Request $request, $attachment)
     {
+        $attachment = Attachment::find($attachment);
         return Storage::disk($attachment->driver)
             ->download($attachment->path, $attachment->name, [
                 'X-Vapor-Base64-Encode' => 'True',
