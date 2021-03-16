@@ -1,5 +1,5 @@
 <div>
-    <x-laravel-blade-ui::form.group label="$lable">
+    <x-laravel-blade-ui::form.group :label="$lable">
         <input type="file"
                id="file_gallery"
                class="filepond"
