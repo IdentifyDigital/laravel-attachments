@@ -43,13 +43,14 @@ class AttachmentManager
      * @param $model
      * @return array|bool
      */
-    public function attach($uuid, $model)
+    public function attach($uuid, $model, $delete = false)
     {
 
         if(is_array($uuid)) {
 
             /** remove all in array */
-            $model->attachments()->whereNotIn('id', $uuid)->delete();
+            if ($delete)
+                $model->attachments()->whereNotIn('id', $uuid)->delete();
 
             $attachments = [];
 
@@ -69,7 +70,8 @@ class AttachmentManager
         } else {
 
             /** remove all that aren't this uuid */
-            $model->attachments()->where('id', '!=', $uuid)->delete();
+            if ($delete)
+                $model->attachments()->where('id', '!=', $uuid)->delete();
 
             $attachment = Attachment::query()->find($uuid);
             if($attachment instanceof Attachment) {

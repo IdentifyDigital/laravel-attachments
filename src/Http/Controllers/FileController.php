@@ -52,4 +52,18 @@ class FileController extends Controller
                 'X-Content-Transfer-Id' => 123321
             ]);
     }
+
+    /**
+     * File Delete
+     */
+    public function delete(Request $request)
+    {
+        $attachment = Attachment::find($request->input('attachment'));
+        $attachment->delete();
+
+        return response([
+            'success' => true,
+            'file' => $attachment->getKey()
+        ]);
+    }
 }
