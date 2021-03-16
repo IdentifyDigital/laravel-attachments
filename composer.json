@@ -17,7 +17,7 @@
         "laravel": {
             "providers": [
                 "IdentifyDigital\\LaravelAttachments\\LaravelAttachmentsServiceProvider",
-                "IdentifyDigital\\LaravelAttachments\\LaravelAttachmentsRouteServiceProvider",
+                "IdentifyDigital\\LaravelAttachments\\LaravelAttachmentsRouteServiceProvider"
             ]
         }
     },
