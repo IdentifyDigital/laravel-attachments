@@ -10,7 +10,7 @@ use IdentifyDigital\Contacts\Observers\AddressObserver;
 
 /**
  * Class AttachmentsServiceProvider
- * @package IdentifyDigital\Attachments
+ * @package IdentifyDigital\LaravelAttachments
  */
 class LaravelAttachmentsServiceProvider extends ServiceProvider
 {

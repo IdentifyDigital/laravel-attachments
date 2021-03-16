@@ -8,7 +8,7 @@ use Storage;
 
 /**
  * Class Attachment
- * @package IdentifyDigital\Attachments\Models
+ * @package IdentifyDigital\LaravelAttachments\Models
  */
 class Attachment extends Model
 {
