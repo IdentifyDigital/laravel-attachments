@@ -20,11 +20,20 @@ Run Database Migrations:
 > php artisan migrate
 
 Get NPM packages for filepond:
-> npm i
+> npm i @identifydigital/jquery-filepond
 
 ## Service Provider
 
 > IdentifyDigital\LaravelAttachments\AttachmentsServiceProvider
+
+## Views
+```html
+<x-laravel-attachments::file-pond :relation="$modelToAttach" :maxMBFileSize="10">
+    <x-slot name="embededMessage">
+        <p>Click here to upload files</p>
+    </x-slot>
+</x-laravel-attachments::file-pond>
+```
 
 ## Models
 

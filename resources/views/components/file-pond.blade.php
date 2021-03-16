@@ -5,7 +5,7 @@
                class="filepond"
                name="files[gallery][]"
                @if(isset($relation) && $relation->attachments()->exists())
-                data-files="{{json_encode($product->attachments->toArray())}}"
+                data-files="{{json_encode($relation->attachments->toArray())}}"
                @endif
                multiple
                :data-label-idle='$embededMessage'
