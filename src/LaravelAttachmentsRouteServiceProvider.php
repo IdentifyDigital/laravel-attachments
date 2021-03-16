@@ -1,15 +1,14 @@
 <?php
 
 
-namespace IdentifyDigital\Attachments;
-
+namespace IdentifyDigital\LaravelAttachments;
 
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 
-class AttachmentsRouteServiceProvider
+class LaravelAttachmentsRouteServiceProvider
 {
     /**
      * Define your route model bindings, pattern filters, etc.

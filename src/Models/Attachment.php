@@ -1,5 +1,6 @@
 <?php
-namespace IdentifyDigital\Attachments\Models;
+
+namespace IdentifyDigital\LaravelAttachments\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -12,6 +13,7 @@ use Storage;
 class Attachment extends Model
 {
     use SoftDeletes;
+
     /**
      * The attributes that are mass assignable.
      *

@@ -1,10 +1,12 @@
 <?php
-namespace IdentifyDigital\Attachments\Facades;
+
+namespace IdentifyDigital\LaravelAttachments\Facades;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Facade;
 use Ramsey\Uuid\UuidInterface;
-use IdentifyDigital\Attachments\Models\Attachment;
+use IdentifyDigital\LaravelAttachments\Models\Attachment;
 
 /**
  * @method static Attachment new(UuidInterface $uuid, string $path, UploadedFile $file, $user, string $driver = null)

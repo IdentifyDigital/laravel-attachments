@@ -1,10 +1,10 @@
 <?php
-namespace IdentifyDigital\Attachments\Controllers;
+namespace IdentifyDigital\LaravelAttachments\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use IdentifyDigital\Attachments\Facades\AttachmentManager;
+use IdentifyDigital\LaravelAttachments\Facades\AttachmentManager;
 
 class FileUploadController extends Controller
 {

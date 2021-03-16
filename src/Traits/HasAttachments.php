@@ -1,9 +1,9 @@
 <?php
 
 
-namespace IdentifyDigital\Attachments\Traits;
+namespace IdentifyDigital\LaravelAttachments\Traits;
 
-use IdentifyDigital\Attachments\Models\Attachment;
+use IdentifyDigital\LaravelAttachments\Models\Attachment;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
 

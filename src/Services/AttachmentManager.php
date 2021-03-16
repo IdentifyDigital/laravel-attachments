@@ -1,5 +1,5 @@
 <?php
-namespace IdentifyDigital\Attachments\Services;
+namespace IdentifyDigital\LaravelAttachments\Services;
 
 use Illuminate\Http\UploadedFile;
 use Ramsey\Uuid\UuidInterface;

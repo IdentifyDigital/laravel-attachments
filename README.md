@@ -1,4 +1,13 @@
-# identifydigital\laravel-attachments
+
+![Developer Boilerplate](https://identifydigital.co.uk/wp-content/uploads/2020/04/identify-digital-logo-png.png)
+
+# Attachments Package for Laravel
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/identifydigitial/laravel-attachments.svg?style=flat-square)](https://packagist.org/packages/identifydigitial/laravel-attachments)
+[![Build Status](https://img.shields.io/travis/identifydigitial/laravel-attachments/master.svg?style=flat-square)](https://travis-ci.org/identifydigitial/laravel-attachments)
+[![Quality Score](https://img.shields.io/scrutinizer/g/identifydigitial/laravel-attachments.svg?style=flat-square)](https://scrutinizer-ci.com/g/identifydigitial/laravel-attachments)
+[![Total Downloads](https://img.shields.io/packagist/dt/identifydigitial/laravel-attachments.svg?style=flat-square)](https://packagist.org/packages/identifydigitial/laravel-attachments)
+
 
 A laravel plugin that allows you to quickly add and work with attachments throughout your laravel application.
 
@@ -10,15 +19,18 @@ Install the package through composer:
 Run Database Migrations:
 > php artisan migrate
 
+Get NPM packages for filepond:
+> npm i
+
 ## Service Provider
 
-> IdentifyDigital\Attachments\AttachmentsServiceProvider
+> IdentifyDigital\LaravelAttachments\AttachmentsServiceProvider
 
 ## Models
 
 ### Attachment
 
-> IdentifyDigital\AddressBook\Models\Attachment
+> IdentifyDigital\LaravelAttachments\Models\Attachment
 
 
 ## Traits
@@ -26,7 +38,7 @@ Run Database Migrations:
 ### HasAttachments
 
 ```php
-use IdentifyDigital\Attachments\Traits\HasAttachments;
+use IdentifyDigital\LaravelAttachments\Traits\HasAttachments;
 
 class MyModel extends Model {
    

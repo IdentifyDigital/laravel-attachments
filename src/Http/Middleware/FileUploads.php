@@ -1,7 +1,7 @@
 <?php
 
 
-namespace IdentifyDigital\Attachments\Http\Middleware;
+namespace IdentifyDigital\LaravelAttachments\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
