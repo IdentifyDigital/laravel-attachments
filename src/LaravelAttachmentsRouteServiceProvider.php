@@ -7,8 +7,9 @@ use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
-class LaravelAttachmentsRouteServiceProvider
+class LaravelAttachmentsRouteServiceProvider extends ServiceProvider
 {
     /**
      * Define your route model bindings, pattern filters, etc.
