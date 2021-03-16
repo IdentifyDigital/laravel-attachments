@@ -1,0 +1,29 @@
+{
+    "name": "identifydigital/laravel-attachments",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Bradley King",
+            "email": "bradley@identifywebdesign.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "identifydigital/laravel-repositories": "1.*",
+        "identifydigital/laravel-blade-ui": "dev-master"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IdentifyDigital\\LaravelAttachments\\LaravelAttachmentsServiceProvider",
+                "IdentifyDigital\\LaravelAttachments\\LaravelAttachmentsRouteServiceProvider",
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "IdentifyDigital\\LaravelAttachments\\": "src/"
+        }
+    }
+}
