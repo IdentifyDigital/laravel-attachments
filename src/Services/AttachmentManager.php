@@ -3,7 +3,7 @@ namespace IdentifyDigital\LaravelAttachments\Services;
 
 use Illuminate\Http\UploadedFile;
 use Ramsey\Uuid\UuidInterface;
-
+use IdentifyDigital\LaravelAttachments\Models\Attachment;
 class AttachmentManager
 {
 
