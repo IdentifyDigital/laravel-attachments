@@ -3,12 +3,20 @@ namespace IdentifyDigital\LaravelAttachments\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use IdentifyDigital\LaravelAttachments\Facades\AttachmentManager;
+use MPL\Common\Models\Attachment;
 
-class FileUploadController extends Controller
+class FileController extends Controller
 {
-    public function fileUpload(Request $request)
+    /**
+     * File Uploads
+     *
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
+    public function upload(Request $request)
     {
         $uuid = Str::uuid();
         $file = $request->file('file');
@@ -27,5 +35,20 @@ class FileUploadController extends Controller
             'success' => true,
             'file' => $attachment->getKey()
         ]);
+    }
+
+    /**
+     * File Downloads
+     *
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
+    public function download(Request $request, Attachment $attachment)
+    {
+        return Storage::disk($attachment->driver)
+            ->download($attachment->path, $attachment->name, [
+                'X-Vapor-Base64-Encode' => 'True',
+                'X-Content-Transfer-Id' => 123321
+            ]);
     }
 }

@@ -47,6 +47,16 @@ class Attachment extends Model
     public $incrementing = false;
 
     /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'url',
+        'size_readable'
+    ];
+
+    /**
      * Returns a URL for the current Attachment.
      *
      * @return mixed
@@ -126,5 +136,4 @@ class Attachment extends Model
     {
         return $this->morphTo('authenticatable');
     }
-
 }
