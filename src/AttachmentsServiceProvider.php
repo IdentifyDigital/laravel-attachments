@@ -1,10 +1,10 @@
 <?php
 
 
-namespace IdentifyDigital\Attachments;
+namespace IdentifyDigital\LaravelAttachments;
 
 use Illuminate\Support\ServiceProvider;
-use IdentifyDigital\Attachments\Services\AttachmentManager;
+use IdentifyDigital\LaravelAttachments\Services\AttachmentManager;
 use IdentifyDigital\Contacts\Models\Address;
 use IdentifyDigital\Contacts\Observers\AddressObserver;
 
@@ -21,6 +21,10 @@ class AttachmentsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../config/attachments.php' => config_path('laravel-attachments.php'),
+        ]);
+
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-attachments');
 
